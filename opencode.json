@@ -1,0 +1,69 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "grep": "allow",
+    "glob": "allow",
+    "ls": "allow",
+    "cat": "allow",
+    "head": "allow",
+    "tail": "allow",
+    "echo": "allow",
+    "read": "allow",
+    "bash": "allow",
+    "skill": {
+       "*": "allow",
+    }
+  },
+  "provider": {
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-6": {
+          "name": "claude-sonnet-4-6"
+        },
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        },
+        "claude-haiku-4-5-20251001": {
+          "name": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://100.92.159.5:11434/v1"
+      },
+      "models": {
+        "qwen3.5:27b": {
+          "name": "qwen3.5:27b"
+        }
+      }
+    },
+    "llamacpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp (remote)",
+      "options": {
+        "baseURL": "http://100.92.159.5:8080/v1"
+      },
+      "models": {
+        "Qwen3-Coder-Next": {
+          "name": "Qwen3-Coder-Next"
+        }
+      }
+    },
+    "opencode": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenCode (local)",
+      "models": {
+        "minimax-m2.5-free": {
+          "name": "minimax-m2.5-free"
+        },
+        "nemotron-3-super-free": {
+          "name": "nemotron-3-super-free"
+        }
+      }
+    }
+
+  }
+}
